@@ -62,4 +62,4 @@ if __name__ == '__main__':
         problem.solve()
         problems[n] = problem
         logging.getLogger().setLevel(logging.INFO)
-        logging.info(f"N = {n}, best solution: {problem.best_sol}, elements: {problem.min_number_of_el}, total steps: {problem.total_steps}")
+        logging.info(f"N = {n}, best solution: {problem.best_sol}, elements: {problem.min_number_of_el}, visited nodes: {problem.total_steps}")
