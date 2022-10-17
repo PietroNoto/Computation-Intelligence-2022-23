@@ -1,7 +1,9 @@
 Limiting combination group size to 6 I got:
   N = 5, best solution: (0, 9, 15), elements: 5, visited nodes: 162 -> optimal because number of elements = N
   N = 10, best solution: (2, 34, 38), elements: 10, visited nodes: 3269 -> as above
-  N = 20, best solution: (0, 11, 18, 19, 30), elements: 23, visited nodes: 330616 -> potentially suboptimal because 23 > N 
+  N = 20, best solution: (0, 11, 18, 19, 30), elements: 23, visited nodes: 330616 -> potentially suboptimal because 23 > N
+  N = 30, best solution: (29, 39, 43, 67, 99), elements: 36, visited nodes: 134375527
+  N = 40, best solution: (5, 9, 20, 51, 64), elements: 54, visited nodes: 11288629
 
 Using group size = 5 I got:
   N = 5, best solution: (0, 9, 15), elements: 5, visited nodes: 162
@@ -30,7 +32,7 @@ Using group size = 4 I got:
   N = 100, best solution: None, elements: 427, visited nodes: 12884725 -> no solution found
  
 Conclusions:
-  Grouping from 5 to 9 the problem is doable for N << 100. With N = 5, 10 I got optimal results (even for 4-grouping) because the number of elements is equal to the number of integers needed for completing the set without duplicates.
+  Grouping from 5 to 9 the problem is doable for N << 100, With N = 50 computational time becomes too much. With N = 5, 10 I got optimal results (even for 4-grouping) because the number of elements is equal to the number of integers needed for completing the set without duplicates.
   For N = 20 a 5-grouping produces a slighly less optimal solution because set size is 24 but with 6,7,8,9 grouping it is 23. 
   I'd prefer performing a 6-grouping because it is a good trade-off between results and computational time.
   For N >= 100 computational time to find a solution is just eternal.
