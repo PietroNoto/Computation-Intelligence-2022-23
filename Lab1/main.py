@@ -30,7 +30,7 @@ class Problem:
 
 
     def solve(self):
-        for n in range(3, 6):
+        for n in range(1, 6):
             possible_solutions = combinations(range(self.size), n)
             for ps in possible_solutions:
                 self.total_steps += 1
@@ -57,7 +57,7 @@ class Problem:
 if __name__ == '__main__':
     problems = {}
     seed = 42
-    for n in [5, 10, 20, 100, 500, 1000]:
+    for n in [5, 10, 20, 30, 40]:
         problem = Problem(n, seed)
         problem.solve()
         problems[n] = problem
