@@ -30,7 +30,7 @@ class Problem:
 
 
     def solve(self):
-        for n in range(3, 6):
+        for n in range(1, 6):
             possible_solutions = combinations(range(self.size), n)
             for ps in possible_solutions:
                 self.total_steps += 1
