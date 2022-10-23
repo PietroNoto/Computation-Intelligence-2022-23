@@ -1,7 +1,6 @@
 import random
 import logging
 from itertools import combinations
-from re import L
 
 
 class Problem:
