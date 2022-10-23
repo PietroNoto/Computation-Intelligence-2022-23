@@ -1,4 +1,4 @@
-<h1>Overview</h1>
+<h1>Overview</h1> 
 
 <p>
 The algorith(s) you used are A* and BFS search and you made a comparison between the outcomes of the two. The problem has been solved for N = 5, 10, 20 and you tried also N = 100. The code, provided by the prof, isn't very understable (not your fault) but I'd have appreciated some comments if I want to be picky. 
