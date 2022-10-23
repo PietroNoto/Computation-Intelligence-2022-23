@@ -1,6 +1,7 @@
 import random
 import logging
 from itertools import combinations
+from re import L
 
 
 class Problem:
@@ -8,7 +9,7 @@ class Problem:
     def __init__(self, N, seed):
         input_data = self.problem(N, seed)
         self.seed = seed
-        self.input = self.makeAsDict(input_data)
+        self.input = self.makeAsDict(self.removeDuplicates(input_data))
         self.N = N
         self.size = len(self.input)
         self.min_number_of_el = self.size
@@ -25,12 +26,17 @@ class Problem:
         ]
 
 
+    def removeDuplicates(self, raw_data):
+        list_of_tuples = [tuple(l) for l in raw_data]
+        return set(list_of_tuples)
+
+
     def makeAsDict(self, data):
         return {i : l for i, l in enumerate(data)}
 
 
     def solve(self):
-        for n in range(1, 6):
+        for n in range(3, 6):
             possible_solutions = combinations(range(self.size), n)
             for ps in possible_solutions:
                 self.total_steps += 1
@@ -57,7 +63,7 @@ class Problem:
 if __name__ == '__main__':
     problems = {}
     seed = 42
-    for n in [5, 10, 20, 100, 500, 1000]:
+    for n in [5, 10, 20, 30, 40, 50]:
         problem = Problem(n, seed)
         problem.solve()
         problems[n] = problem
