@@ -48,7 +48,7 @@ class Problem:
                     
     
     def solve_GA(self, PROBLEM_SIZE, POPULATION_SIZE, OFFSPRING_SIZE, NUM_GENERATIONS):
-        EPOCHS = 1
+        EPOCHS = 100
         num_of_el = 0
         #iterate over epochs to produce several populations in order to maximize the chances
         #to get more suitable individuals that lead to more optimal solutions
@@ -96,7 +96,7 @@ class Problem:
 if __name__ == '__main__':
     problems = {}
     seed = 42
-    POPULATION_SIZE = 10**6
+    POPULATION_SIZE = 10**4
     OFFSPRING_SIZE = 10
     NUM_GENERATIONS = 100
 
