@@ -33,7 +33,7 @@ class Problem:
     def makeAsDict(self, data):
         return {i : l for i, l in enumerate(data)}
 
-
+    #previous lab solution, don't look at this...
     def solve(self):
         for n in range(1, 6):
             possible_solutions = combinations(range(self.size), n)
@@ -46,7 +46,7 @@ class Problem:
                     if self.min_number_of_el == self.N:
                         return   #I found the best solution
                     
-    
+    #... but this!
     def solve_GA(self, PROBLEM_SIZE, POPULATION_SIZE, OFFSPRING_SIZE, NUM_GENERATIONS):
         EPOCHS = 100
         num_of_el = 0
