@@ -85,5 +85,5 @@ With GA the amount of steps needed starts pretty high, but grows slightly with N
 
 <p>
 I noticed that the lower the fitness (sum of ones of a genome) the closer the individual is to the optimum, because fewer lists from the dictionary are selected. That's why I changed genetic_algorithm.py::line64 reverse sort from True to False, this way I get individuals with lowest fitness first.
-Additionally, I preferred not to trim the population because of massive amount of duplicates that kill potential wipe out potentially good individuals. Therefore, I applied a duplicate removal task afterwards, once the population has been created.
+Additionally, I preferred not to trim the population because of massive amount of duplicates that wipe out potentially good individuals. Therefore, I applied a duplicate removal task afterwards, once the population has been created.
 </p>
